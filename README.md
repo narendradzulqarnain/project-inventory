@@ -18,7 +18,7 @@
 - Buat branch utama baru, hubungkan direktori lokal dengan repositori github, lalu push</p>
 
 <h4>2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan<br>antara urls.py, views.py, models.py, dan berkas html.</h4>
-![MVT!](mvt.png)
+![MVT](https://github.com/narendradzulqarnain/project-inventory/blob/main/mvt.png)
 <p>urls.py akan meneruskan request ke views.py, lalu views.py akan mengambil data yang diperlukan dari models.py lalu ditampilkan melalui berkas .html</p>
 
 <h4>3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?</h4>
