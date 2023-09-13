@@ -4,7 +4,7 @@ from django.shortcuts import render
 def show_main(request):
     context = {
         'appname' : 'what do we need to survive?',
-        'name': 'become death, destroyer of worlds',
+        'name': 'Narendra Dzulqarnain',
         'class': 'PBP F'
     }
 
