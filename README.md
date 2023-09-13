@@ -1,4 +1,3 @@
-# project-inventory
 <h4>1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h4>
 <p>- Membuat direktori lokal untuk project <br>
 - Inisiasi git <br>
@@ -19,12 +18,12 @@
 - Buat branch utama baru, hubungkan direktori lokal dengan repositori github, lalu push</p>
 
 <h4>2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan<br>antara urls.py, views.py, models.py, dan berkas html.</h4>
-<p></p>
+![MVT](mvt.png)
+<p>urls.py akan meneruskan request ke views.py, lalu views.py akan mengambil data yang diperlukan dari models.py lalu ditampilkan melalui berkas .html</p>
 
 <h4>3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?</h4>
 <p>Virtual environment digunakan untuk menghindari konflik dependencies dari proyek berbeda. Virtual environment mengisolasi package dan dependencies dari aplikasi<br>
-Kita tetap bisa membuat aplikasi django tanpa virtual environment. Namun, jika kita mengerjakan lebih dari satu proyek dengan versi django yang berbeda, maka akan<br>
-terjadi konflik akibat perbedaan versi django pada perangkat lokal.</p>
+Kita tetap bisa membuat aplikasi django tanpa virtual environment. Namun, jika kita mengerjakan lebih dari satu proyek dengan versi django yang berbeda, maka akan terjadi konflik akibat perbedaan versi django pada perangkat lokal.</p>
 
 <h4>4. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.</h4>
 <p>MVC, MVT dan MVVM merupakan design pattern yang digunakan dalam pemrograman berbasis platform.<br>
