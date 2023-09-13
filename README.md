@@ -18,7 +18,7 @@
 - Buat branch utama baru, hubungkan direktori lokal dengan repositori github, lalu push</p>
 
 <h4>2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan<br>antara urls.py, views.py, models.py, dan berkas html.</h4>
-![img](/mvt.png)
+![img](mvt.png)
 
 <p>urls.py akan meneruskan request ke views.py, lalu views.py akan mengambil data yang diperlukan dari models.py lalu ditampilkan melalui berkas .html</p>
 
