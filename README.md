@@ -82,3 +82,70 @@ HTML digunakan untuk menampilkan halaman web dari request</p> <br>
 ![Alt text](image-3.png)
 
 ![Alt text](image-4.png)
+
+
+
+
+<h3>TUGAS 4</h3>
+<h4>1. Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya? </h4>
+<p>Django UserCreationForm adalah modul <i>build-in</i> dari django yang digunakan untuk membuat <i>user</i> pada 
+aplikasi web. Kelebihan UserCreationForm adalah terdapat <i>built-in validation</i> untuk isian seperti <i>username</i> dan <i>password</i>
+untuk memastikan bahwa input user valid. Sebagai contoh, UserCreationForm memastikan <i>user</i> mengisi password yang memenuhi kriteria
+password kuat. Namun, UserCreationForm mungkin tidak cocok untuk form registrasi yang kompleks, misal form registrasi
+yang memerlukan tambahan <i>fields</i>/data dari <i>user</i> atau form yang memiliki banyak lapisan</p> <br>
+<h4>2. Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?</h4>
+<p>Autentikasi adalah proses memverifikasi informasi <i>user</i> yang ingin masuk, sedangkan otorisasi adalah proses memverifikasi
+apakah <i>user</i> tersebut memiliki akses terhadap sesuatu. Keduanya merupakan proses verifikasi yang penting
+dalam keamanan aplikasi. Autentikasi diperlukan untuk memastikan pengguna yang ingin masuk memang valid. Otorisasi 
+diperlukan untuk menentukan hak/akses dari pengguna tersebut.</p><br>
+<h4>3. Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?</h4>
+<p>Cookies adalah informasi berukuran kecil yang dikirim dari <i>web server</i> ke <i>browser</i> dan dikirimkan kembali
+oleh <i>browser</i> ke <i>web server</i> pada permintaan halaman berikutnya. Django memberikan <i>session id</i> yang unik
+ketika pengguna masuk ke website. <i>Session id</i> tersebut disimpan dalam cookie dengan nama <i>default</i> "sessionid".
+<i>Session id</i> ini digunakan untuk mengasosiasikan pengguna dengan data <i>session</i>
+yang tersimpan di server.</p> <br>
+<h4>4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?</h4>
+<p>Penggunaan cookies aman secara general meskipun tetap ada risiko potensial yang harus diwaspadai. Contohnya XSS, CSRF, atau Cookies/Session
+posioning.</p> <br>
+<h4>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h4>
+<h5>Mengimplementasikan fungsi registrasi, login, dan logout untuk memungkinkan pengguna untuk mengakses aplikasi sebelumnya dengan lancar.</h5>
+<p>
+* Buka main/views.py lalu import redirect, UserCreationForm, dan messages <br>
+* Buat fungsi bernama register yang menerima parameter request dengan isi fungsi seperti di tutorial<br>
+* Buat berkas baru bernama register.html pada main/templates dan isi dengan template pada tutorial<br>
+* import fungsi register tadi ke urls.py lalu tambahkan ke dalam path<br>
+* import authenticate dan login pada views.py<br>
+* Buat fungsi login bernama login_user seperti yang ada di tutorial<br>
+* Buat berkas baru bernama login.html pada main/templates dan isi berkas dengan template pada tutorial<br>
+* Tambahkan path untuk fungsi login di urls.py<br>
+* Lakukan hal yang serupa untuk logout<br>
+* Untuk merestriksi halaman main, import login_required pada views.py <br>
+* Tambahkan kode yang ada di tutorial di atas fungsi show_main<br>
+</p>
+<h5>Membuat dua akun pengguna dengan masing-masing tiga dummy data menggunakan model yang telah dibuat pada aplikasi sebelumnya untuk setiap akun di lokal.</h5>
+<p>
+* Jalankan aplikasi lalu akses halaman web menggunakan browser <br>
+* Lakukan register lalu login<br>
+* Tekan tombol add item lalu tambahkan item<br>
+* register akun kedua lalu lakukan hal yang serupa <br>
+</p>
+<h5>Menghubungkan model Item dengan User.</h5>
+<p>
+    * import User pada main/models.py <br>
+    * Tambahkan potongan kode yang ada di tutorial pada class Item <br>
+    * Buka main/views.py dan lakukan perubahan pada fungsi create_product dan show_main seperti di tutorial <br>
+    * Lakukan migrasi <br>
+</p>
+<h5>Menampilkan detail informasi pengguna yang sedang logged in seperti username dan menerapkan cookies seperti last login pada halaman utama aplikasi.</h5>
+<p>
+    * Buka main/views.py lalu import HttpResponseRedirect, reverse, dan datetime<br>
+    * Pada fungsi login_user, tambahkan cookie bernama last_login seperti di tutorial<br>
+    * Ubah fungsi show_main seperti pada tutorial<br>
+    * Ubah fungsi logout_user seperti di tutorial agar cookie dihapus ketika logout<br>
+    * Login menggunakan akun yang sudah dibuat atau registrasi terlebih dahulu jika belum membuat akun<br>
+    * Tekan F12 pada keyboard untuk inspect website<br>
+    * Lihat ke halaman application lalu cookies<br>
+</p>
+
+![Alt text](image-5.png)
+
