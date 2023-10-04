@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-    <title>Login</title>
+<title>Login</title>
 {% endblock meta %}
 
 {% block content %}
@@ -25,11 +25,14 @@
 
             <tr>
                 <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                <td><input class="btn btn-primary" type="submit" value="Login"></td>
             </tr>
         </table>
     </form>
 
+    
+    <style>
+    </style>
     {% if messages %}
         <ul>
             {% for message in messages %}

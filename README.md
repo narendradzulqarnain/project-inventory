@@ -148,4 +148,54 @@ posioning.</p> <br>
 </p>
 
 ![Alt text](image-5.png)
+<h3>TUGAS 5</h3>
+<h4>1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.</h4>
+<p>
+    1. Element selector <br>
+    Dapat mengubah properti untuk semua elemen dengan tag html sama. Waktu yang tepat untuk menggunakannya adalah ketika kita ingin
+    properti yang konsisten untuk suatu tag. Contoh, mengatur font dan warna untuk h1 agar setiap elemen h1 memiliki properti sama.<br>
+    2. ID selector<br>
+    Dapat mengubah properti elemen berdasarkan ID pada tag. Waktu yang tepat untuk menggunakannya adalah ketika kita ingin memberikan 
+    <i>style</i> pada elemen yang spesifik.<br>
+    3. Class selector
+    Dapat mengubah properti lebih dari satu elemen yang memiliki atribut class yang sama. Waktu yang tepat untuk menggunakannya adalah
+    ketika kita ingin memberikan <i>style</i> spesifik untuk sekelompok elemen atau menerapkan properti yang konsisten untuk sekelompok
+    elemen dengan class yang sama.
+</p>
+<h4>2. Jelaskan HTML5 Tag yang kamu ketahui.</h4>
+<pre>
+    &lt;head&gt; : bagian dari struktur dokumen html untuk memberikan informasi mengenai halaman web
+    &lt;br&gt; :  next line
+    &lt;body&gt; : elemen body
+    &lt;button&gt; : untuk tombol
+    &lt;center&gt; : align-center suatu text
+    &lt;b&gt; : bold
+    &lt;i&gt; : italic
+    &lt;link&gt; : merefrensikan link
+    &lt;p&gt; Membuat paragraf
+    &lt;table&gt; : membuat tabel
+    &lt;th&gt; : header dari tabel    
+</pre>
+<h4>3. Jelaskan perbedaan antara margin dan padding.</h4>
+<pre>
+    Margin merupakan ruang/jarak diantara elemen yang bersebelahan sedangkan padding adalah ruang/jarak diantara konten
+    dalam elemen.
+</pre>
+<h4>4. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?</h4>
+<pre>
+    Tailwind menyediakan kumpulan <i>utility class</i> yang langsung diaplikasikan ke elemen html. Di sisi lain, Bootstrap merupakan <i>framwork</i>
+    berbasis komponen, menyediakan komponen-komponen yang sudah di-<i>define</i>.
+</pre>
+<h4>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h4>
+<pre>
+    Aktifkan virtual environment
+    - Menambahkan bootstrap dan js ke aplikasi seperti di tutorial
+    - Kustomisasi menggunakan inline style dan internal style sheets
+    - Agar halaman web terlihat lebih berwarna, saya merubah background color pada body di base.html
+    - Merubah tampilan login button dan register button pada halaman register dengan menggunakan button dari bootstrap dan mengatur warnanya 
+    - Merubah tampilan tombol add item pada halaman tambah item
+    - Membuat tampilan daftar item menjadi bentuk cards dengan menggunakan cards dari bootstrap
+    - Menambahkan card untuk informasi user
+    - Menambahkan navigation bar untuk ke halaman logout
+</pre>
 
