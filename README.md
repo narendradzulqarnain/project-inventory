@@ -201,53 +201,52 @@ posioning.</p> <br>
 <h3>TUGAS 6</h3>
 <h4>1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.</h4>
 <pre>
-    <i>Asynchronous programming</i>: Eksekusi program dapat dikerjakan sekaligus tanpa harus menunggu program lain selesai.
-    <i>Synchronous programming</i>: Eksekusi program dilakukan satu per satu.
+ <i>Asynchronous programming</i>: Eksekusi program dapat dikerjakan sekaligus tanpa harus menunggu program lain selesai.
+ <i>Synchronous programming</i>: Eksekusi program dilakukan satu per satu.
 </pre>
 <h4>2. Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.</h4>
 <pre>
-    <i>Event-driven programming</i> adalah paradigma yang berfokus pada respon terhadap <i>event</i>. Alur program ditentukan oleh <i>event</i> dan <i>event handler</i>.
-    <i>Event</i> dapat berasal dari interaksi user, hardware, atau pesan dari bagian program yang lain.
-
-    Salah satu penerapannya pada tugas ini adalah fitur tombol untuk menambahkan produk. Ketika tombol ditekan &#40<i>event</i>&#41, akan muncul modal
-    untuk mengisi data produk yang ingin ditambahkan &#40<i>event handler</i>&#41.
+ <i>Event-driven programming</i> adalah paradigma yang berfokus pada respon terhadap <i>event</i>. Alur program ditentukan oleh <i>event</i> dan <i>event handler</i>.
+ <i>Event</i> dapat berasal dari interaksi user, hardware, atau pesan dari bagian program yang lain.
+Salah satu penerapannya pada tugas ini adalah fitur tombol untuk menambahkan produk. Ketika tombol ditekan &#40<i>event</i>&#41, akan muncul modal
+untuk mengisi data produk yang ingin ditambahkan &#40<i>event handler</i>&#41.
 </pre>
 <h4>3. Jelaskan penerapan asynchronous programming pada AJAX.</h4>
 <pre>
-    Browser akan memanggil XMLHttpRequest untuk proses pertukaran data secara asinkron dan mengirimkan HttpRequest ke server. Setelah itu, data 
-    akan diproses oleh server dan dikirim kembali ke browser. Data akan langsung ditampilkan tanpa perlu memuat ulang halaman web.
+Browser akan memanggil XMLHttpRequest untuk proses pertukaran data secara asinkron dan mengirimkan HttpRequest ke server. Setelah itu, data 
+akan diproses oleh server dan dikirim kembali ke browser. Data akan langsung ditampilkan tanpa perlu memuat ulang halaman web.
 </pre>
 <h4>4. Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.</h4>
 <pre>
-    <b>Fetch API</b>
-    - Modern dan built-in, tidak perlu external library seperti jQuery
-    - Ringan, lebih efisien untuk permintaan AJAX yang simpel
-    - Fleksibel, kita dapat bekerja dengan berbagai format data dan penanganan request dapat disesuaikan
-    <b>jQuery</b>
-    - Cross-Browser compatible, dapat menyesuaikan dengan berbagai macam browser termasuk browser versi lama
-    - Method AJAX yang lebih user-friendly
-    - Memiliki banyak plugin dan extension, dapat memudahkan pekerjaan yang umum.
-
-    Penggunaan teknologi tergantung pada kebutuhan proyek. Jika proyek tidak memerlukan fitur cross-browser, maka fetch API dapat menjadi
-    pilihan karena lebih ringan. Namun, jika proyek menginginkan fitur cross-browser atau API yang lebih simpel, maka jQuery lebih cocok.
+<b>Fetch API</b>
+- Modern dan built-in, tidak perlu external library seperti jQuery
+- Ringan, lebih efisien untuk permintaan AJAX yang simpel
+- Fleksibel, kita dapat bekerja dengan berbagai format data dan penanganan request dapat disesuaikan
+<b>jQuery</b>
+- Cross-Browser compatible, dapat menyesuaikan dengan berbagai macam browser termasuk browser versi lama
+- Method AJAX yang lebih user-friendly
+- Memiliki banyak plugin dan extension, dapat memudahkan pekerjaan yang umum.
+Penggunaan teknologi tergantung pada kebutuhan proyek. Jika proyek tidak memerlukan fitur cross-browser, maka fetch API dapat menjadi
+pilihan karena lebih ringan. Namun, jika proyek menginginkan fitur cross-browser atau API yang lebih simpel, maka jQuery lebih cocok.
+    
 </pre>
 <h4>5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).</h4>
 <pre>
-    <b>AJAX GET</b>
-    - Buat fungsi get_item_json pada views.py untuk mengambil item-item yang dimiliki user.
-    - Tambahkan routing untuk fungsi tersebut pada urls.py
-    - Buat kontainer untuk cards pada main.html
-    - Buat blok script dan tambahkan fungsi asinkronus seperti fungsi getProducts pada tutorial untuk mengambil item-item user.
-    - Tambahkan fungsi refreshProducts seperti pada tutorial untuk me-refresh data item secara asinkronus
-    - Ubah htmlString nya menjadi elemen cards item user kita.
-    <b>AJAX POST</b>
-    - Buat fungsi add_item_ajax pada views.py untuk menambahkan item secara asinkron
-    - Tambahkan routing untuk fungsi tersebut pada urls.py
-    - Tambahkan kode bootstrap pada main.html untuk membuat modal sebagai form untuk menambah item.
-    - Tambahkan button untuk menampilkan modal
-    - Buat fungsi baru pada blok script untuk menambahkan item
-    - Tambahkan fungsi onclick pada tombol "Add Item" untuk memanggil fungsi yang menambahkan item
-    <b>Collect static</b>
-    Pada settings.py tambahkan variabel STATIC_ROOT seperti pada settings.py di tugas ini, lalu jalankan perintah python manage.py collectstatic
+<b>AJAX GET</b>
+- Buat fungsi get_item_json pada views.py untuk mengambil item-item yang dimiliki user.
+- Tambahkan routing untuk fungsi tersebut pada urls.py
+- Buat kontainer untuk cards pada main.html
+- Buat blok script dan tambahkan fungsi asinkronus seperti fungsi getProducts pada tutorial untuk mengambil item-item user.
+- Tambahkan fungsi refreshProducts seperti pada tutorial untuk me-refresh data item secara asinkronus
+- Ubah htmlString nya menjadi elemen cards item user kita.
+<b>AJAX POST</b>
+- Buat fungsi add_item_ajax pada views.py untuk menambahkan item secara asinkron
+- Tambahkan routing untuk fungsi tersebut pada urls.py
+- Tambahkan kode bootstrap pada main.html untuk membuat modal sebagai form untuk menambah item.
+- Tambahkan button untuk menampilkan modal
+- Buat fungsi baru pada blok script untuk menambahkan item
+- Tambahkan fungsi onclick pada tombol "Add Item" untuk memanggil fungsi yang menambahkan item
+<b>Collect static</b>
+Pada settings.py tambahkan variabel STATIC_ROOT seperti pada settings.py di tugas ini, lalu jalankan perintah python manage.py collectstatic
 </pre>
 
