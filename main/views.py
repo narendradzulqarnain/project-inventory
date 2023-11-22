@@ -14,7 +14,7 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
 from django.views.decorators.csrf import csrf_exempt
-# Create your views here.
+
 @login_required(login_url='/login')
 def show_main(request):
     items = Item.objects.filter(user=request.user)
